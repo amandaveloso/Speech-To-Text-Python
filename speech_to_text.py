@@ -25,13 +25,8 @@ text
 import csv
 
 # Abre um arquivo CSV para escrita
-with open('output.csv', 'w', newline='', encoding='utf-8') as file:
+with open('audio_transcrito.csv', 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
 
     # Escreve o texto em uma linha do arquivo CSV
     writer.writerow([text])
-
-import pydub
-
-sound = pydub.AudioSegment.from_file('audio.wav')
-sound.play()
